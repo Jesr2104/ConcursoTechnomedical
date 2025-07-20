@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📝 Formulario de Participación | Sorteo iPad Air - Technomedical</title>
+  <meta name="description" content="Participa en el sorteo de una iPad Air 13″ completando este formulario. ¡Solo para asistentes al congreso!">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    :root {
+      --primary: #006494;
+      --accent: #00B4D8;
+      --secondary: #FF7D00;
+      --bg: #F4FBFD;
+      --text: #333;
+      --white: #fff;
+      --dark: #003554;
+      --error: #e63946;
+      --success: #2a9d8f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%2300B4D8" opacity="0.03"><circle cx="25" cy="25" r="3"/><circle cx="75" cy="25" r="3"/><circle cx="50" cy="50" r="3"/><circle cx="25" cy="75" r="3"/><circle cx="75" cy="75" r="3"/></svg>');
+      background-size: 50px 50px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background-color: #e0e0e0;
+      border-radius: 3px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(to right, var(--accent), var(--primary));
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent), var(--primary));
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .form-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .form-intro strong {
+      color: var(--primary);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .required::after {
+      content: " *";
+      color: var(--error);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #f9f9f9;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+      background-color: var(--white);
+    }
+
+    .input-icon {
+      position: relative;
+    }
+
+    .input-icon i {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      color: #999;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .checkbox-group {
+      margin: 1.5rem 0;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+
+    .checkbox-label input {
+      width: auto;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+
+    .checkbox-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .checkbox-text a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .checkbox-text a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background: linear-gradient(to right, var(--accent), var(--primary));
+      color: var(--white);
+      border: none;
+      padding: 1.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 100%;
+      margin: 1rem auto 0 auto;
+      box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+      
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;              
+
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 180, 216, 0.5);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button::after {
+      content: "→";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    button:hover::after {
+      right: 15px;
+    }
+
+    .prize-reminder {
+      background-color: #e0f7ff;
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .prize-reminder img {
+      width: 60px;
+      margin-right: 1rem;
+    }
+
+    .prize-info h3 {
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .prize-info p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .error-message {
+      color: var(--error);
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    input:invalid:not(:placeholder-shown) {
+      border-color: var(--error);
+    }
+
+    input:invalid:not(:placeholder-shown) + .error-message {
+      display: block;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(42, 157, 143, 0.1);
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .success-message i {
+      font-size: 3rem;
+      color: var(--success);
+      margin-bottom: 1rem;
+    }
+
+    .success-message h2 {
+      color: var(--success);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 1.5rem;
+      }
+      
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .loader {
+      width: 18px;
+      height: 18px;
+      border: 3px solid transparent;
+      border-top: 3px solid white;
+      border-right: 3px solid white;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    button.bloqueado {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container animate__animated animate__fadeIn">    
+    <h1>Formulario de Participación</h1>
+    <p class="form-intro">Completa tus datos para participar en el sorteo de una <strong>iPad Air 13″</strong>. Todos los campos marcados con * son obligatorios.</p>
+    
+    <div class="prize-reminder">
+      <img src="ipad-air.avif" alt="iPad Air">
+      <div class="prize-info">
+        <h3>Premio: iPad Air 13" Wi-Fi</h3>
+        <p>Chip M1 • Pantalla Liquid Retina • Compatible con Apple Pencil</p>
+      </div>
+    </div>
+    
+    <form id="participacion-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre" class="required">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: María González Pérez" required>
+          <div class="error-message">Por favor ingresa tu nombre completo</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="nacimiento" class="required">Fecha de nacimiento</label>
+          <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+          <div class="error-message">Selecciona tu fecha de nacimiento</div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cedula" class="required">Cédula de ciudadanía</label>
+          <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" pattern="\d{1,10}" maxlength="10" oninput="this.value = this.value.replace(/\D/g, '').slice(0,10)" required>
+          <div class="error-message">Ingresa un número de cédula válido</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="ciudad" class="required">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ej: Bogotá" required>
+          <div class="error-message">Ingresa tu ciudad de residencia</div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="empresa">Empresa (opcional)</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Ej: Hospital Central">
+        </div>
+        
+        <div class="form-group">
+          <label for="cargo">Cargo (opcional)</label>
+          <input type="text" id="cargo" name="cargo" placeholder="Ej: Bacteriólogo Jefe">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="colegio">Colegio de bacteriólogos (opcional)</label>
+        <input type="text" id="colegio" name="colegio" placeholder="Ej: Colegio Colombiano de Bacteriología">
+      </div>
+      
+      <div class="form-group">
+        <label for="asesor">Asesor comercial Technomedical (opcional)</label>
+        <input type="text" id="asesor" name="asesor" placeholder="Si fuiste invitado por un asesor, escribe su nombre">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="telefono" class="required">Teléfono</label>
+          <div class="input-icon">
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required>
+            <i>📱</i>
+          </div>
+          <div class="error-message">Ingresa un número de teléfono válido</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="required">Correo electrónico</label>
+          <div class="input-icon">
+            <input type="email" id="email" name="email" placeholder="Ej: ejemplo@correo.com" required>
+            <i>✉️</i>
+          </div>
+          <div class="error-message">Ingresa un correo electrónico válido</div>
+        </div>
+      </div>
+      
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" required>
+          <span class="checkbox-text">Acepto los <a href="terminos-concurso-technomedical.html" target="_blank">Términos y Condiciones</a> del concurso y autorizo el tratamiento de mis datos personales conforme a la política de privacidad.</span>
+        </label>
+      </div>
+      
+      <button type="submit" id="botonSubmit">ENVIAR Y PARTICIPAR</button>
+    </form>
+    <p id="mensaje"></p>  
+  </div>
+  <footer>
+    Technomedical S.A.S. – Todos los derechos reservados © 2025<br>
+    Una empresa comprometida con la innovación en tecnología médica
+  </footer>
+  <!-- Enlaza el archivo externo JS -->
+  <script src="script.js"></script>
+</body>
+</html>
