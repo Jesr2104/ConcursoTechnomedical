@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("participacion-form");
   const mensaje = document.getElementById("mensaje");
   const boton = document.getElementById("botonSubmit");
-  const server = "https://script.google.com/macros/s/AKfycbzr5WscEEe2YjT4vFwcWBiYQvRzTwMAzVl90u6NriRXTDV5208A1f55NI62_QhFmVbX/exec";
+  const server = "https://script.google.com/macros/s/AKfycbzcWipoD1ethj_hmdeSPvryV1lk6DH36IVshbHY7rJF_6oh1xANhIyQbYFlIqvNph2d/exec";
 
 
   form.addEventListener("submit", async function (e) {
@@ -50,7 +50,7 @@ async function verificarCedulaRegistrada(cedula) {
   formData.append("cedula", cedula);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzr5WscEEe2YjT4vFwcWBiYQvRzTwMAzVl90u6NriRXTDV5208A1f55NI62_QhFmVbX/exec", {
+    const response = await fetch(server, {
       method: "POST",
       body: formData,
     });
