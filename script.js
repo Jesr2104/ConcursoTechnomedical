@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("participacion-form");
   const mensaje = document.getElementById("mensaje");
   const boton = document.getElementById("botonSubmit");
-  const server = "https://script.google.com/macros/s/AKfycbzcWipoD1ethj_hmdeSPvryV1lk6DH36IVshbHY7rJF_6oh1xANhIyQbYFlIqvNph2d/exec";
+  const server = "https://script.google.com/macros/s/AKfycbzrZ2OifZ6HdnVuI5GCSftcoMxEYcmH79g9f5VyBCgtiBeeod1ImXHz-j7tBAfeBCWE/exec";
 
 
   form.addEventListener("submit", async function (e) {
