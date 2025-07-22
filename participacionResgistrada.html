@@ -1,6 +1,175 @@
-<div class="success-message" id="success-message">
-  <div>🎉</div>
-  <h2>¡Felicidades!</h2>
-  <p>Tu participación en el sorteo ha sido registrada correctamente.</p>
-  <p>El resultado se publicará en el stand de Technomedical cerca al cierre del evento y nuestras redes sociales.</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Registro | CNB 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3498db;
+      --secondary: #e74c3c;
+      --accent: #f39c12;
+      --dark: #2c3e50;
+      --light: #ecf0f1;
+      --success: #2ecc71;
+      --text: #34495e;
+      --text-light: #7f8c8d;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    .container {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    h1 {
+      color: var(--dark);
+      margin-bottom: 24px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+      border-radius: 3px;
+    }
+    
+    .icon {
+      font-size: 4rem;
+      color: var(--success);
+      margin-bottom: 20px;
+      animation: bounce 1s;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    
+    .highlight {
+      font-weight: 600;
+      color: var(--secondary);
+      background-color: rgba(231, 76, 60, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    
+    .stand {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffe9d6 0%, #ffd8b8 100%);
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin: 15px 0;
+      color: #d35400;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border: 2px dashed #f39c12;
+      animation: pulse 2s infinite;
+    }
+    
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }  
+    
+    .event-info {
+      background-color: rgba(52, 152, 219, 0.05);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 25px 0;
+      border-left: 4px solid var(--primary);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .icon {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¡Registro Exitoso!</h1>
+    <p>Gracias por registrarte.</p>
+    
+    <div class="event-info">
+      <p>Solo falta un paso para completar tu inscripción y participar en la rifa del iPad.</p>
+    </div>
+    
+    <p>Visítanos en los <span class="stand">Stands 36-38</span> durante el evento para validar tu registro.</p>
+    
+    <p>Al presentarte en nuestro stand, quedarás <span class="highlight">oficialmente participando en la rifa</span> y podrás recibir material exclusivo.</p>
+    
+    <div class="footer">
+      <p>© 2025 Technomedical - Todos los derechos reservados</p>
+    </div>
+  </div>
+</body>
+</html>

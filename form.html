@@ -11,7 +11,7 @@
     :root {
       --primary: #006494;
       --accent: #00B4D8;
-      --secondary: #FF7D00;
+      --secondary: #FFA726;
       --bg: #F4FBFD;
       --text: #333;
       --white: #fff;
@@ -336,6 +336,20 @@
       opacity: 0.6;
       pointer-events: none;
     }
+
+    .infor-stand {
+      background-color: var(--secondary);
+      width: 100%;
+      color: #ffffff;
+      padding: 5px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-family: 'Arial', sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -382,19 +396,19 @@
       
       <div class="form-row">
         <div class="form-group">
-          <label for="empresa">Empresa (opcional)</label>
-          <input type="text" id="empresa" name="empresa" placeholder="Ej: Hospital Central">
+          <label for="empresa" class="required">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Ej: Hospital Central" required>
         </div>
         
         <div class="form-group">
-          <label for="cargo">Cargo (opcional)</label>
-          <input type="text" id="cargo" name="cargo" placeholder="Ej: Bacteriólogo Jefe">
+          <label for="cargo" class="required">Cargo</label>
+          <input type="text" id="cargo" name="cargo" placeholder="Ej: Bacteriólogo Jefe" required>
         </div>
       </div>
       
       <div class="form-group">
-        <label for="colegio">Colegio de bacteriólogos (opcional)</label>
-        <input type="text" id="colegio" name="colegio" placeholder="Ej: Colegio Colombiano de Bacteriología">
+        <label for="colegio" class="required">Colegio de bacteriólogos</label>
+        <input type="text" id="colegio" name="colegio" placeholder="Ej: Colegio Colombiano de Bacteriología" required>
       </div>
       
       <div class="form-group">
@@ -428,6 +442,8 @@
           <span class="checkbox-text">Acepto los <a href="terminos-concurso-technomedical.html" target="_blank">Términos y Condiciones</a> del concurso y autorizo el tratamiento de mis datos personales conforme a la política de privacidad.</span>
         </label>
       </div>
+
+      <p class="infor-stand"><strong>Estamos en los stands 36 - 37</strong></p>
       
       <button type="submit" id="botonSubmit">ENVIAR Y PARTICIPAR</button>
     </form>

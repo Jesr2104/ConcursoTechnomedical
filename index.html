@@ -11,7 +11,7 @@
     :root {
       --primary: #006494;
       --accent: #00B4D8;
-      --secondary: #FF7D00;
+      --secondary: #FFA726;
       --bg: #F4FBFD;
       --text: #333;
       --white: #fff;
@@ -22,6 +22,10 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    .sin-subrayado {
+      text-decoration: none;
     }
 
     body {
@@ -66,7 +70,7 @@
 
     header p {
       font-size: 1.2rem;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
       position: relative;
     }
@@ -102,7 +106,6 @@
       right: 0;
       width: 100px;
       height: 100px;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300B4D8" opacity="0.1"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>') no-repeat;
       background-size: contain;
     }
 
@@ -138,14 +141,6 @@
       border-radius: 8px;
       margin-bottom: 2.5rem;
       position: relative;
-    }
-
-    .highlight::before {
-      content: "✨";
-      position: absolute;
-      top: -15px;
-      left: -15px;
-      font-size: 2rem;
     }
 
     .prize-container {
@@ -411,7 +406,7 @@
     }
 
     .social-icon img {
-      width: 40px;     /* Cambia este valor según el tamaño deseado */
+      width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
     }
@@ -419,12 +414,92 @@
     .social-icon img:hover {
       transform: scale(1.1); /* Efecto al pasar el mouse */
     }
+
+    .mensaje-simple {
+      background-color: #ffe6e6;
+      border: 1px solid #ff9999;
+      padding: 16px;
+      border-radius: 8px;
+      color: #660000;
+      font-family: Arial, sans-serif;
+      width: 100%;
+    }
+
+    .mensaje-simple h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .mensaje-simple p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .modulo-visitanos {
+      background-color: #f9f9f9;
+      border-left: 4px solid #7a4ef2;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .modulo-visitanos h2 {
+      margin-top: 0;
+      color: #7a4ef2;
+      font-size: 1.5rem;
+    }
+
+    .modulo-visitanos p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .modulo-visitanos ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px 0 20px 0;
+    }
+
+    .modulo-visitanos li {
+      margin-bottom: 8px;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+
+    .points{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .infor-stand {
+      background-color: var(--secondary);
+      width: 100%;
+      color: #ffffff;
+      padding: 5px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-family: 'Arial', sans-serif;
+    }
   </style>
 </head>
 <body>
   <header class="animate__animated animate__fadeIn">
-    <h1>¡GANA UNA IPAD AIR 13"!</h1>
-    <p>Participa en nuestro sorteo exclusivo para asistentes al congreso Technomedical</p>
+    <h1>¡Participa por un iPad con Technomedical!</h1>
+    <p>
+      Estamos felices de acompañarte en el <strong>23º Congreso Internacional de Bacteriología</strong>
+      y queremos invitarte a conocer más de cerca nuestras soluciones en diagnóstico clínico.
+      <br>
+      Para participar en la rifa de un iPad, sigue estos pasos:
+    </p>
   </header>
 
   <div class="countdown animate__animated animate__fadeIn animate__delay-1s">
@@ -433,10 +508,10 @@
 
   <main class="animate__animated animate__fadeIn animate__delay-1s">
     <h2>¡Tu oportunidad de ganar esta increíble iPad Air!</h2>
-    <p>En Technomedical queremos premiar tu participación en nuestro congreso. Por eso sorteamos una <strong>iPad Air de 13 pulgadas</strong> entre todos los asistentes que completen nuestro sencillo registro.</p>
+    <p>En Technomedical queremos premiar tu participación en el congreso. Por eso sorteamos una <strong>iPad Air de 13 pulgadas</strong> entre todos los asistentes que completen nuestro sencillo registro.</p>
     
     <div class="urgency animate__animated animate__pulse animate__infinite">
-      🚀 ¡Solo para los primeros 500 participantes! Regístrate ahora
+      ¡Solo para los primeros 500 participantes! Regístrate ahora
     </div>
 
     <div class="prize-container">
@@ -467,14 +542,21 @@
       </div>
       <div class="step animate__animated animate__fadeInUp animate__delay-1s">
         <div class="step-number">2</div>
-        <h3>Completa el formulario</h3>
-        <p>Regístrate con tus datos de contacto</p>
+        <h3>Regístrate llenando este formulario</h3>
+        <p>con tus datos básicos.</p>
       </div>
       <div class="step animate__animated animate__fadeInUp animate__delay-2s">
         <div class="step-number">3</div>
-        <h3>Síguenos en Instagram</h3>
-        <p>@technomedical para noticias y resultados</p>
+        <h3>Acércate al stand de Technomedical</h3>
+        <p>durante el congreso (Ágora Bogotá).</p>
       </div>
+
+      <div class="mensaje-simple">
+        <h3>🎟️ Nota Importante</h3>
+        <p>Allí validaremos tu participación de forma presencial. <strong>Solo así entrarás oficialmente en la rifa.</strong></p>
+        <p><strong>Recuerda:</strong> solo quienes completen ambos pasos estarán participando.</p>
+      </div>
+
       <div class="step animate__animated animate__fadeInUp animate__delay-3s">
         <div class="step-number">4</div>
         <h3>¡Listo!</h3>
@@ -482,31 +564,42 @@
       </div>
     </div>
 
+    <h2>¿Por qué visitarnos?</h2>
+    <div class="modulo-visitanos">
+      <p>En <strong>Technomedical</strong> creemos en la tecnología diagnóstica como herramienta para transformar la práctica del laboratorio clínico.</p>
+      <ul>
+        <li>✅ Ofrecemos soluciones científicas validadas</li>
+        <li>✅ Soporte humano cercano</li>
+        <li>✅ Cobertura nacional que garantiza acompañamiento real</li>
+      </ul>
+      <p><strong>Este congreso</strong> es la oportunidad perfecta para conocernos y descubrir cómo fortalecer tu laboratorio desde el primer contacto.</p>
+      <p class="infor-stand"><strong>Estamos en los stands 36 - 37</strong>
+    </div>
+
     <h2>Detalles importantes</h2>
     <div class="highlight">
-      <p><strong>Fecha límite:</strong> Formulario habilitado hasta las 5:00 p.m. del día del evento</p>
-      <p><strong>Premio:</strong> Apple iPad Air de 13 pulgadas (Wi-Fi), no transferible ni canjeable</p>
-      <p><strong>Anuncio del ganador:</strong> En el stand de Technomedical cerca al cierre del evento</p>
-      <p><strong>Extra:</strong> Comparte tu experiencia con #Technomedical2023 y aumenta tus posibilidades</p>
+      <p class="points"><strong>Fecha límite:</strong> Formulario habilitado hasta las 5:00 p.m. del día del evento</p>
+      <p class="points"><strong>Premio:</strong> Apple iPad Air de 13 pulgadas (Wi-Fi), no transferible ni canjeable</p>
+      <p class="points"><strong>Anuncio del ganador:</strong> En el stand de Technomedical cerca al cierre del evento</p>
     </div>
 
     <p class="small-text">Al participar, aceptas nuestros <a href="tc-sorteo.html" target="_blank">Términos y Condiciones</a> y autorizas el uso de tus datos para fines promocionales.</p>
 
     <div class="btn-container">
-      <a href="form.html" class="btn animate__animated animate__pulse animate__infinite animate__slow">🎉 ¡QUIERO PARTICIPAR AHORA!</a>
+      <a href="form.html" class="btn animate__animated animate__pulse animate__infinite animate__slow">QUIERO PARTICIPAR</a>
       <p style="margin-top: 1rem; font-size: 0.9rem;">Tienes hasta el cierre del evento para registrar tu participación</p>
     </div>
   </main>
 
   <footer>
     <div class="social-links">
-      <a href="https://instagram.com/technomedical" target="_blank" class="social-icon">
+      <a href="https://instagram.com/technomedical" target="_blank" class="social-icon sin-subrayado">
         <img src="instagram-blanco.png" alt="instagam">
       </a>
-      <a href="https://facebook.com/technomedical" target="_blank" class="social-icon">
+      <a href="https://facebook.com/technomedical" target="_blank" class="social-icon sin-subrayado">
         <img src="facebook-blanco.png" alt="facebook">
       </a>
-      <a href="https://twitter.com/technomedical" target="_blank" class="social-icon">
+      <a href="https://twitter.com/technomedical" target="_blank" class="social-icon sin-subrayado">
         <img src="linkedin-blanco.png" alt="linkedin">
       </a>
     </div>
